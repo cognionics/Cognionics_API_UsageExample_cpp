@@ -49,77 +49,119 @@ const char* const DATAMODE[] = {
     "raw"
 };
 
-const int CFGPTRSIZE[NUMSETTINGS] = {
-    sizeof(SAMPLE_RATE_MAP[0]),
-    sizeof(GAIN_MAP[0]),
-    sizeof(BOOLTOSTR[0]),
-    sizeof(BOOLTOSTR[0]),
-    sizeof(BOOLTOSTR[0]),
-    sizeof(BOOLTOSTR[0]),
-    0,
-    sizeof(BOOLTOSTR[0]),
-    sizeof(IMPEDANCEMODE[0]),
-    sizeof(BOOLTOSTR[0]),
-    sizeof(DATAMODE[0])
+
+const void* CFGPTR[NUMSETTINGS] = {
+    SAMPLE_RATE_MAP,
+    GAIN_MAP,
+    BOOLTOSTR,
+    BOOLTOSTR,
+    BOOLTOSTR,
+    BOOLTOSTR,
+    NULL,
+    BOOLTOSTR,
+    IMPEDANCEMODE,
+    BOOLTOSTR,
+    DATAMODE
 };
 
-const char* const PROMPTMSGS[11][3] = {
+const size_t CFGPTRSIZE[2][NUMSETTINGS] = {
+    {
+        sizeof(SAMPLE_RATE_MAP),
+        sizeof(GAIN_MAP),
+        sizeof(BOOLTOSTR),
+        sizeof(BOOLTOSTR),
+        sizeof(BOOLTOSTR),
+        sizeof(BOOLTOSTR),
+        0,
+        sizeof(BOOLTOSTR),
+        sizeof(IMPEDANCEMODE),
+        sizeof(BOOLTOSTR),
+        sizeof(DATAMODE)
+    },
+    {
+        sizeof(SAMPLE_RATE_MAP[0]),
+        sizeof(GAIN_MAP[0]),
+        sizeof(BOOLTOSTR[0]),
+        sizeof(BOOLTOSTR[0]),
+        sizeof(BOOLTOSTR[0]),
+        sizeof(BOOLTOSTR[0]),
+        0,
+        sizeof(BOOLTOSTR[0]),
+        sizeof(IMPEDANCEMODE[0]),
+        sizeof(BOOLTOSTR[0]),
+        sizeof(DATAMODE[0])
+    }
+};
+
+const char* const PROMPTMSGS[11][4] = {
     {
         "Sample rate: %d Hz\n",
         "\nSample rate options:\n",
+        "%d: %d",
         "Enter new sample rate setting: "
     },
     {
         "Gain: %d\n",
         "\nGain options:\n",
+        "%d: %d",
         "Enter new gain setting: "
     },
     {
         "Test mode: %s\n",
         "\nEnable test mode:\n",
+        "%d: %s",
         "Enter new test mode setting: "
     },
     {
         "Accelerometer enabled: %s\n",
         "\nEnable accelerometer:\n",
+        "%d: %s",
         "Enter new accelerometer setting: "
     },
     {
         "Gyroscope enabled: %s\n",
         "\nEnable gyroscope:\n",
+        "%d: %s",
         "Enter new gyroscope setting: "
     },
     {
         "Extension channels detected: %s\n",
         "",
-        ""
-    },
-    {
-        "Number of extension channels: %d\n",
         "",
         ""
     },
     {
+        "Number of extension channels: %d\n",
+        "\nSet number of extension channels: \n",
+        "Current number of extension channels: %d\n",
+        "Enter new number of extension channels (1-16): "
+    },
+    {
         "Enable impedance check when device powered on: %s\n",
         "\nEnable impedance check when device powered on:\n",
+        "%d: %s",
         "Enter new power on impedance check setting: "
     },
     {
         "Impedance check mode: %s\n",
         "\nImpedance check mode:\n",
+        "%d: %s",
         "Enter new impedance check mode setting: "
     },
     {
         "Wireless trigger enabled: %s\n",
         "\nEnable wireless trigger:\n",
+        "%d: %s",
         "Enter new wireless trigger setting: "
     },
     {
         "Data stream mode: %s\n",
         "\nData stream mode:\n",
+        "%d: %s",
         "Enter new data stream mode setting: "
     }
 };
+
 
 const char* const CHANNELLABELS[] = {
 "Reserved 0",

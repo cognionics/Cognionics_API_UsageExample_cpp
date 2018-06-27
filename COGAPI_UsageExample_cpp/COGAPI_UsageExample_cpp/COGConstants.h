@@ -1,5 +1,3 @@
-#define NUMSETTINGS 11
-
 const int SAMPLE_RATE_MAP[8] = 
 {
     250,
@@ -49,6 +47,7 @@ const char* const DATAMODE[] = {
     "raw"
 };
 
+<<<<<<< HEAD
 
 const void* CFGPTR[NUMSETTINGS] = {
     SAMPLE_RATE_MAP,
@@ -94,6 +93,9 @@ const size_t CFGPTRSIZE[2][NUMSETTINGS] = {
 };
 
 const char* const PROMPTMSGS[11][4] = {
+=======
+const char* const PROMPTMSGS[][] = {
+>>>>>>> parent of 247e94d... pre-cleanup push
     {
         "Sample rate: %d Hz\n",
         "\nSample rate options:\n",

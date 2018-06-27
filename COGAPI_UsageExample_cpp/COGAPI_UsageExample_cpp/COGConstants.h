@@ -48,6 +48,7 @@ const char* const DATAMODE[] = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const void* CFGPTR[NUMSETTINGS] = {
     SAMPLE_RATE_MAP,
@@ -93,6 +94,9 @@ const size_t CFGPTRSIZE[2][NUMSETTINGS] = {
 };
 
 const char* const PROMPTMSGS[11][4] = {
+=======
+const char* const PROMPTMSGS[][] = {
+>>>>>>> parent of 247e94d... pre-cleanup push
 =======
 const char* const PROMPTMSGS[][] = {
 >>>>>>> parent of 247e94d... pre-cleanup push

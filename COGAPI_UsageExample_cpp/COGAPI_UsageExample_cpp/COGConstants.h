@@ -1,3 +1,5 @@
+#define NUMSETTINGS 11
+
 const int SAMPLE_RATE_MAP[8] = 
 {
     250,
@@ -47,7 +49,21 @@ const char* const DATAMODE[] = {
     "raw"
 };
 
-const char* const PROMPTMSGS[][] = {
+const int CFGPTRSIZE[NUMSETTINGS] = {
+    sizeof(SAMPLE_RATE_MAP[0]),
+    sizeof(GAIN_MAP[0]),
+    sizeof(BOOLTOSTR[0]),
+    sizeof(BOOLTOSTR[0]),
+    sizeof(BOOLTOSTR[0]),
+    sizeof(BOOLTOSTR[0]),
+    0,
+    sizeof(BOOLTOSTR[0]),
+    sizeof(IMPEDANCEMODE[0]),
+    sizeof(BOOLTOSTR[0]),
+    sizeof(DATAMODE[0])
+};
+
+const char* const PROMPTMSGS[11][3] = {
     {
         "Sample rate: %d Hz\n",
         "\nSample rate options:\n",

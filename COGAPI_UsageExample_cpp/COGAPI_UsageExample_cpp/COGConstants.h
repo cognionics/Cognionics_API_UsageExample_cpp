@@ -1,15 +1,15 @@
 #define NUMSETTINGS 11
 
-const int SAMPLE_RATE_MAP[8] = 
+const char* const SAMPLE_RATE_MAP[] = 
 {
-    250,
-    500,
-    1000,
-    2000,
-    4000,
-    8000,
-    16000,
-    32000
+    "250",
+    "500",
+    "1000",
+    "2000",
+    "4000",
+    "8000",
+    "16000",
+    "32000"
 };
 
 // const int GAIN_MAP[7] = 
@@ -23,15 +23,15 @@ const int SAMPLE_RATE_MAP[8] =
 //     12
 // };
 
-const int GAIN_MAP[7] = 
+const char* const GAIN_MAP[] = 
 {
-    1,
-    2,
-    3,
-    4,
-    6,
-    8,
-    12
+    "1",
+    "2",
+    "3",
+    "4",
+    "6",
+    "8",
+    "12"
 };
 
 const char* const BOOLTOSTR[] = {
@@ -49,8 +49,14 @@ const char* const DATAMODE[] = {
     "raw"
 };
 
+// const char* const a[] = {
+//     "Hello world",
+//     "testy"
+// };
+// const char* const* test = a;
+// char* test = &SAMPLE_RATE_MAP[0][0];
 
-const void* CFGPTR[NUMSETTINGS] = {
+const char* const* CFGPTR[NUMSETTINGS] = {
     SAMPLE_RATE_MAP,
     GAIN_MAP,
     BOOLTOSTR,
@@ -95,15 +101,15 @@ const size_t CFGPTRSIZE[2][NUMSETTINGS] = {
 
 const char* const PROMPTMSGS[11][4] = {
     {
-        "Sample rate: %d Hz\n",
+        "Sample rate: %s Hz\n",
         "\nSample rate options:\n",
-        "%d: %d",
+        "%d: %s",
         "Enter new sample rate setting: "
     },
     {
-        "Gain: %d\n",
+        "Gain: %s\n",
         "\nGain options:\n",
-        "%d: %d",
+        "%d: %s",
         "Enter new gain setting: "
     },
     {
@@ -131,9 +137,9 @@ const char* const PROMPTMSGS[11][4] = {
         ""
     },
     {
-        "Number of extension channels: %d\n",
+        "Number of extension channels: %s\n",
         "\nSet number of extension channels: \n",
-        "Current number of extension channels: %d\n",
+        "Current number of extension channels: %s\n",
         "Enter new number of extension channels (1-16): "
     },
     {

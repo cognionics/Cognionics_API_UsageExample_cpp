@@ -49,12 +49,6 @@ const char* const DATAMODE[] = {
     "raw"
 };
 
-// const char* const a[] = {
-//     "Hello world",
-//     "testy"
-// };
-// const char* const* test = a;
-// char* test = &SAMPLE_RATE_MAP[0][0];
 
 const char* const* CFGPTR[NUMSETTINGS] = {
     SAMPLE_RATE_MAP,

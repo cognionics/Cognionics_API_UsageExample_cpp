@@ -45,7 +45,7 @@ const char* const IMPEDANCEMODE[] = {
 };
 
 const char* const DATAMODE[] = {
-    "compressed",
+    "high-speed",
     "raw"
 };
 

@@ -1,4 +1,4 @@
-#define NUMSETTINGS 11
+#define NUMSETTINGS 10
 
 const char* const SAMPLE_RATE_MAP[] = 
 {
@@ -56,7 +56,6 @@ const char* const* CFGPTR[NUMSETTINGS] = {
     BOOLTOSTR,
     BOOLTOSTR,
     BOOLTOSTR,
-    BOOLTOSTR,
     NULL,
     BOOLTOSTR,
     IMPEDANCEMODE,
@@ -68,7 +67,6 @@ const size_t CFGPTRSIZE[2][NUMSETTINGS] = {
     {
         sizeof(SAMPLE_RATE_MAP),
         sizeof(GAIN_MAP),
-        sizeof(BOOLTOSTR),
         sizeof(BOOLTOSTR),
         sizeof(BOOLTOSTR),
         sizeof(BOOLTOSTR),
@@ -84,7 +82,6 @@ const size_t CFGPTRSIZE[2][NUMSETTINGS] = {
         sizeof(BOOLTOSTR[0]),
         sizeof(BOOLTOSTR[0]),
         sizeof(BOOLTOSTR[0]),
-        sizeof(BOOLTOSTR[0]),
         0,
         sizeof(BOOLTOSTR[0]),
         sizeof(IMPEDANCEMODE[0]),
@@ -93,7 +90,7 @@ const size_t CFGPTRSIZE[2][NUMSETTINGS] = {
     }
 };
 
-const char* const PROMPTMSGS[11][4] = {
+const char* const PROMPTMSGS[NUMSETTINGS][4] = {
     {
         "Sample rate: %s Hz\n",
         "\nSample rate options:\n",
@@ -124,17 +121,17 @@ const char* const PROMPTMSGS[11][4] = {
         "%d: %s",
         "Enter new gyroscope setting: "
     },
+    // {
+    //     "Extension channels detected: %s\n",
+    //     "",
+    //     "",
+    //     ""
+    // },
     {
-        "Extension channels detected: %s\n",
-        "",
-        "",
-        ""
-    },
-    {
-        "Number of extension channels: %s\n",
-        "\nSet number of extension channels: \n",
-        "Current number of extension channels: %s\n",
-        "Enter new number of extension channels (1-16): "
+        "Number of enabled extension channels: %s\n",
+        "\n",
+        "Current number of enabled extension channels: %s\n",
+        "Enter new number of extension channels to enable (1-32): "
     },
     {
         "Enable impedance check when device powered on: %s\n",

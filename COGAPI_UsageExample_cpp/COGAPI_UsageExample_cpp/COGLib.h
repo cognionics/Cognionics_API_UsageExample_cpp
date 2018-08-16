@@ -1,10 +1,14 @@
-/**
-COGLib.h
-Header file for COG functions
-
-@author William Bei
-@version ve3
-*/
+//------------------------------------------------------------------------------
+// COGLib.h
+// 
+// Description:
+// Header file for COGLib functions
+// 
+// @authors: William Bei and Junle Zhang
+// 
+// www.cognionics.net
+// info@cognionics.com
+//------------------------------------------------------------------------------
 
 #pragma once  
 

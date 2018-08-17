@@ -37,6 +37,7 @@ typedef unsigned long DWORD;
 
 //Error flags
 //general flags
+#define COG_OK 0
 #define COG_INVALIDINPUT -1
 #define COG_INVALIDCHANNELVAL -2
 #define COG_INVALIDVALUE -3
@@ -182,7 +183,7 @@ retrieves the channel gain of a Cognionics device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return device channel gain
 */
-extern "C" COGLIB_API COGLIB_API int COG_GetGain(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetGain(COGDevice *deviceID);
 
 /**
 sets the channel gain of a Cognionics device
@@ -204,12 +205,21 @@ extern "C" COGLIB_API COGChannels COG_GetChannelStatuses(COGDevice *deviceID);
 /**
 controls writing to SD card on DAQ headset
 
+@param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @param SD_MODE the SD card mode - see documentation for modes
 @param filename the name of the file that the data will be stored in
 @param day, hour, min, sec the
 @return 0 if successful, else returns an error flag
 */
 extern "C" COGLIB_API int COG_SDStartStop(COGDevice *deviceID, MODE SD_MODE, char *filename, int day, int month, int year, int hour, int min, int sec, char *subject, char *description);
+
+/**
+returns the number of enabled channels
+
+@param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
+@return the number of enabled channels on the device
+*/
+extern "C" COGLIB_API int COG_GetNumEnabledChannels(COGDevice *deviceID);
 
 /**
 retrieves the sample rate of the device

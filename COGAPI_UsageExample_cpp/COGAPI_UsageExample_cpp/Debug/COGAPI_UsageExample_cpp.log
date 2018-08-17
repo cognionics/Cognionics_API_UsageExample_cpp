@@ -1,6 +1,7 @@
 ﻿  COGAPI_UsageExample_cpp.cpp
-c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\coglib.h(181): warning C4141: 'dllimport': used more than once
-c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(186): warning C4018: '<': signed/unsigned mismatch
-c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(89): warning C4101: 'tempChar': unreferenced local variable
-c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(91): warning C4101: 'temp': unreferenced local variable
+c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(197): warning C4018: '<': signed/unsigned mismatch
+c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(143): warning C4474: 'printf' : too many arguments passed for format string
+  c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(143): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(97): warning C4101: 'tempChar': unreferenced local variable
+c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(99): warning C4101: 'temp': unreferenced local variable
   COGAPI_UsageExample_cpp.vcxproj -> C:\Users\Cognionics\Documents\GitHub\Cognionics_API_UsageExample_cpp\COGAPI_UsageExample_cpp\Debug\COGAPI_UsageExample_cpp.exe

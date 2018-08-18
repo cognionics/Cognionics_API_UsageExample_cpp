@@ -1,0 +1,20 @@
+#define STORED_ARRAYS_SETS_COUNT        8
+#define SETTINGS_ARRAYS_COUNT           10
+#define SETTINGS_ARRAYS_SIZE            100
+#define SETTINGS_ARRAYS_SIZE_MINUS_ONE  (SETTINGS_ARRAYS_SIZE-1)
+#define CHANNELS_ARRAYS_COUNT           3
+#define CHANNELS_ARRAYS_SIZE            512
+#define CHANNELS_ARRAYS_SIZE_MINUS_1    (CHANNELS_ARRAYS_SIZE-1)
+
+#define CONFIG_NVM_PAGES_USED           4
+#define NVM_PAGES_USED					4
+#define NVM_PAGE_WORDS					1024
+#define NVM_PAGES_USED_MINUS_CONFIG_NVM_PAGES_USED  (NVM_PAGES_USED - CONFIG_NVM_PAGES_USED)
+#define CONFIG_FLASH_WORD_SIZE          (CONFIG_NVM_PAGES_USED*NVM_PAGE_WORDS)
+
+#define CONFIG_DATA_CHECK1  449
+#define CONFIG_DATA_CHECK2  69
+
+//need to figure out max download data size
+//maximum download data size for no-stop byte protection
+#define MAX_DL_SIZE     (3*CONFIG_FLASH_WORD_SIZE)

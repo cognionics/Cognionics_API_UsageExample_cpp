@@ -143,15 +143,6 @@ Sets the impedance check of a Cognionics device to off
 extern "C" COGLIB_API int COG_SetImpedanceOff(COGDevice *deviceID);
 
 /**
-reads a byte from a Cognionics device
-
-@param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
-@param temp a pointer that stores the byte that was read from the device
-@return true if byte read is 0xFF, flase if otherwise
-*/
-extern "C" COGLIB_API bool readbyte(COGDevice *deviceID, BYTE* temp);
-
-/**
 retrieves a specified number of data samples from a Cognionics device; this method is compatible with all devices and can read compressed data
 
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.

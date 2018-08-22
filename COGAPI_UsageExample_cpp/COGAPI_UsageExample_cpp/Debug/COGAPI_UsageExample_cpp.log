@@ -1,7 +1,5 @@
 ﻿  COGAPI_UsageExample_cpp.cpp
-e:\dropbox\document\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(140): warning C4018: '<': signed/unsigned mismatch
-e:\dropbox\document\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(35): warning C4101: 'tempChar': unreferenced local variable
-e:\dropbox\document\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(31): warning C4101: 'devDescriptionLength': unreferenced local variable
-e:\dropbox\document\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(30): warning C4101: 'numDevices': unreferenced local variable
-e:\dropbox\document\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(37): warning C4101: 'temp': unreferenced local variable
-  COGAPI_UsageExample_cpp.vcxproj -> E:\Dropbox\document\GitHub\Cognionics_API_UsageExample_cpp\COGAPI_UsageExample_cpp\Debug\COGAPI_UsageExample_cpp.exe
+c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(194): warning C4018: '<': signed/unsigned mismatch
+c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(152): warning C4474: 'printf' : too many arguments passed for format string
+  c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(152): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  COGAPI_UsageExample_cpp.vcxproj -> C:\Users\Cognionics\Documents\GitHub\Cognionics_API_UsageExample_cpp\COGAPI_UsageExample_cpp\Debug\COGAPI_UsageExample_cpp.exe

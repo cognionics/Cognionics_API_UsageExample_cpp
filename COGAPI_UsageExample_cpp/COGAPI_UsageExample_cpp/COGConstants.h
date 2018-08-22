@@ -1,4 +1,5 @@
 #define NUMSETTINGS 10
+#define NUMBEROFSAMPLESPERMINUTE 30000
 
 const char* const SAMPLE_RATE_MAP[] = 
 {

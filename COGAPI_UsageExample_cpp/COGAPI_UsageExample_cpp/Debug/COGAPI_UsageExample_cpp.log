@@ -2,4 +2,5 @@
 c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(194): warning C4018: '<': signed/unsigned mismatch
 c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(152): warning C4474: 'printf' : too many arguments passed for format string
   c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(152): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  LINK : C:\Users\Cognionics\Documents\GitHub\Cognionics_API_UsageExample_cpp\COGAPI_UsageExample_cpp\Debug\COGAPI_UsageExample_cpp.exe not found or not built by the last incremental link; performing full link
   COGAPI_UsageExample_cpp.vcxproj -> C:\Users\Cognionics\Documents\GitHub\Cognionics_API_UsageExample_cpp\COGAPI_UsageExample_cpp\Debug\COGAPI_UsageExample_cpp.exe

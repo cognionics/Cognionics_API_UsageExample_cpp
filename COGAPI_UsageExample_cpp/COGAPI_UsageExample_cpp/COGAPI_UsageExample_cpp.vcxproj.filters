@@ -21,10 +21,10 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="COGLib.h">
+    <ClInclude Include="COGConstants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="COGConstants.h">
+    <ClInclude Include="COGLib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

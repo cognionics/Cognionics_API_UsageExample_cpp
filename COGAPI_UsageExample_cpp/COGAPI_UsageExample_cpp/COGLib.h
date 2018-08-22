@@ -176,23 +176,6 @@ updates a connected Cognionics device with local settings
 */
 extern "C" COGLIB_API int COG_SetConfig(COGDevice *deviceID);
 
-//see mapping
-/**
-retrieves the channel gain of a Cognionics device
-
-@param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
-@return device channel gain
-*/
-extern "C" COGLIB_API int COG_GetGain(COGDevice *deviceID);
-
-/**
-sets the channel gain of a Cognionics device
-
-@param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
-@return device channel gain
-*/
-extern "C" COGLIB_API int COG_SetGain(COGDevice *deviceID, int val);
-
 /**
 retrieves the statuses of the available channels Cognionics device
 
@@ -230,10 +213,10 @@ retrieves the sample rate of the device
 extern "C" COGLIB_API int COG_GetSampleRate(COGDevice *deviceID);
 
 /**
-retrieves the channel gain of the device
+retrieves the channel gain of a Cognionics device
 
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
-@return the channel gain of the Cognionics device
+@return device channel gain
 */
 extern "C" COGLIB_API int COG_GetGain(COGDevice *deviceID);
 

@@ -43,6 +43,7 @@ typedef unsigned long DWORD;
 #define COG_INVALIDVALUE -3
 #define COG_TIMEOUTERROR -4
 #define COG_WRITEFAIL -5
+#define COG_BADFLUSH -6
 
 //device query and connection error flags
 #define COG_NODEVICESCONNECTED -25
@@ -57,12 +58,11 @@ typedef unsigned long DWORD;
 
 //set config error flags
 #define COG_BADINIT -75
-#define COG_BADFLUSH -76
-#define COG_NONSTARTRECEIVED -77
-#define COG_SHORTDATAERROR -78
-#define COG_LONGDATAERROR -79
-#define COG_CRCCHECKFAILURE -80
-#define COG_CONFIGSETERROR -81
+#define COG_NONSTARTRECEIVED -76
+#define COG_SHORTDATAERROR -77
+#define COG_LONGDATAERROR -78
+#define COG_CRCCHECKFAILURE -79
+#define COG_CONFIGSETERROR -80
 
 //SD start stop flags
 #define COG_NOCARDDETECTED -100
@@ -141,6 +141,15 @@ Sets the impedance check of a Cognionics device to off
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 */
 extern "C" COGLIB_API int COG_SetImpedanceOff(COGDevice *deviceID);
+
+/**
+reads a byte from a Cognionics device
+
+@param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
+@param temp a pointer that stores the byte that was read from the device
+@return true if byte read is 0xFF, flase if otherwise
+*/
+extern "C" COGLIB_API bool readbyte(COGDevice *deviceID, BYTE* temp);
 
 /**
 retrieves a specified number of data samples from a Cognionics device; this method is compatible with all devices and can read compressed data

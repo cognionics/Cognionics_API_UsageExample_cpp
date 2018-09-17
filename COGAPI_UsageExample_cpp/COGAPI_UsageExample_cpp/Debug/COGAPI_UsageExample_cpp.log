@@ -1,3 +1,4 @@
-﻿  COGAPI_UsageExample_cpp.cpp
+﻿  stdafx.cpp
+  COGAPI_UsageExample_cpp.cpp
 c:\users\cognionics\documents\github\cognionics_api_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp\cogapi_usageexample_cpp.cpp(202): warning C4018: '<': signed/unsigned mismatch
   COGAPI_UsageExample_cpp.vcxproj -> C:\Users\Cognionics\Documents\GitHub\Cognionics_API_UsageExample_cpp\COGAPI_UsageExample_cpp\Debug\COGAPI_UsageExample_cpp.exe

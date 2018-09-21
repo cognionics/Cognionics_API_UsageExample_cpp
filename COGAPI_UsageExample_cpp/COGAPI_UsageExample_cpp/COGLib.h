@@ -1,31 +1,32 @@
 //------------------------------------------------------------------------------
 // COGLib.h
-// 
-// Description:
-// Header file for COGLib functions
-// 
+// Header file for COG functions 
+//
 // @authors: William Bei and Junle Zhang
+// 
+// COGLib @authors: William Bei and Junle Zhang
 // 
 // www.cognionics.net
 // info@cognionics.com
+// @version ve4
 //------------------------------------------------------------------------------
 
-#pragma once  
-
-#ifdef COGLIB_EXPORTS  
-#define COGLIB_API __declspec(dllexport)   
-#else  
-#define COGLIB_API __declspec(dllimport)   
-#endif  
-
 #pragma once
-//#include <string.h>
+
+#ifdef COGLIB_EXPORTS
+#define COGLIB_API __declspec(dllexport)
+#else
+#define COGLIB_API __declspec(dllimport)
+#endif
+
 #ifndef BYTE
 typedef unsigned char BYTE;
 #endif // !BYTE
 #ifndef DWORD
 typedef unsigned long DWORD;
 #endif // !DWORD
+
+#include <string>
 
 //device constants
 #define MAX_CHANNEL_NUM			512
@@ -57,12 +58,11 @@ typedef unsigned long DWORD;
 #define COG_CONFIGDATAERROR -51
 
 //set config error flags
-#define COG_BADINIT -75
-#define COG_NONSTARTRECEIVED -76
-#define COG_SHORTDATAERROR -77
-#define COG_LONGDATAERROR -78
-#define COG_CRCCHECKFAILURE -79
-#define COG_CONFIGSETERROR -80
+#define COG_NONSTARTRECEIVED -75
+#define COG_SHORTDATAERROR -76
+#define COG_LONGDATAERROR -77
+#define COG_CRCCHECKFAILURE -78
+#define COG_CONFIGSETERROR -79
 
 //SD start stop flags
 #define COG_NOCARDDETECTED -100
@@ -89,10 +89,13 @@ struct COGChannels
 	int labelSize = MAX_CHANNEL_NAME_SIZE;
 
 	//std positions map array
-	char **channelLabels; //[MAX_CHANNEL_NUM][MAX_CHANNEL_NAME_SIZE];
+	char **channelLabels;//[MAX_CHANNEL_NUM][MAX_CHANNEL_NAME_SIZE];
 
 	//channel mask array
 	int channelStatuses[MAX_CHANNEL_NUM];
+
+	//channel gain values
+	float channelGainValues[MAX_CHANNEL_NUM];
 };
 
 /**
@@ -176,6 +179,23 @@ updates a connected Cognionics device with local settings
 */
 extern "C" COGLIB_API int COG_SetConfig(COGDevice *deviceID);
 
+//see mapping
+/**
+retrieves the channel gain of a Cognionics device
+
+@param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
+@return device channel gain
+*/
+extern "C" COGLIB_API int COG_GetGain(COGDevice *deviceID);
+
+/**
+sets the channel gain of a Cognionics device
+
+@param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
+@return device channel gain
+*/
+extern "C" COGLIB_API int COG_SetGain(COGDevice *deviceID, int val);
+
 /**
 retrieves the statuses of the available channels Cognionics device
 
@@ -188,7 +208,6 @@ extern "C" COGLIB_API COGChannels COG_GetChannelStatuses(COGDevice *deviceID);
 /**
 controls writing to SD card on DAQ headset
 
-@param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @param SD_MODE the SD card mode - see documentation for modes
 @param filename the name of the file that the data will be stored in
 @param day, hour, min, sec the
@@ -213,10 +232,10 @@ retrieves the sample rate of the device
 extern "C" COGLIB_API int COG_GetSampleRate(COGDevice *deviceID);
 
 /**
-retrieves the channel gain of a Cognionics device
+retrieves the channel gain of the device
 
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
-@return device channel gain
+@return the channel gain of the Cognionics device
 */
 extern "C" COGLIB_API int COG_GetGain(COGDevice *deviceID);
 

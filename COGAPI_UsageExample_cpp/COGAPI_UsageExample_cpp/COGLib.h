@@ -129,21 +129,21 @@ disconnects from a Cognionics device.
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if successfully disconnected, COG_DISCONNECTFAIL if otherwise
 */
-extern "C" COGLIB_API int COG_Disconnect(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_Disconnect(COGDevice deviceID);
 
 /**
 Sets the impedance check of a Cognionics device to on
 
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 */
-extern "C" COGLIB_API int COG_SetImpedanceOn(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_SetImpedanceOn(COGDevice deviceID);
 
 /**
 Sets the impedance check of a Cognionics device to off
 
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 */
-extern "C" COGLIB_API int COG_SetImpedanceOff(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_SetImpedanceOff(COGDevice deviceID);
 
 /**
 reads a byte from a Cognionics device
@@ -152,7 +152,7 @@ reads a byte from a Cognionics device
 @param temp a pointer that stores the byte that was read from the device
 @return true if byte read is 0xFF, flase if otherwise
 */
-extern "C" COGLIB_API bool readbyte(COGDevice *deviceID, BYTE* temp);
+extern "C" COGLIB_API bool readbyte(COGDevice deviceID, BYTE* temp);
 
 /**
 retrieves a specified number of data samples from a Cognionics device; this method is compatible with all devices and can read compressed data
@@ -162,14 +162,14 @@ retrieves a specified number of data samples from a Cognionics device; this meth
 @param channelData a pointer that stores the data read from the device
 @return 0 if successful, else returns an error flag
 */
-extern "C" COGLIB_API int COG_GetSample(COGDevice *deviceID, int numSample, double *channelData);
+extern "C" COGLIB_API int COG_GetSample(COGDevice deviceID, int numSample, double *channelData);
 /**
 gets the configuration settings of a connected Cognionics device
 
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if configuration successfully retrieved, else returns an error flag
 */
-extern "C" COGLIB_API int COG_GetConfig(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetConfig(COGDevice deviceID);
 
 /**
 updates a connected Cognionics device with local settings
@@ -177,7 +177,7 @@ updates a connected Cognionics device with local settings
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if update successful, else returns an error flag
 */
-extern "C" COGLIB_API int COG_SetConfig(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_SetConfig(COGDevice deviceID);
 
 //see mapping
 /**
@@ -186,7 +186,7 @@ retrieves the channel gain of a Cognionics device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return device channel gain
 */
-extern "C" COGLIB_API int COG_GetGain(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetGain(COGDevice deviceID);
 
 /**
 sets the channel gain of a Cognionics device
@@ -194,7 +194,7 @@ sets the channel gain of a Cognionics device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return device channel gain
 */
-extern "C" COGLIB_API int COG_SetGain(COGDevice *deviceID, int val);
+extern "C" COGLIB_API int COG_SetGain(COGDevice deviceID, int val);
 
 /**
 retrieves the statuses of the available channels Cognionics device
@@ -203,7 +203,7 @@ retrieves the statuses of the available channels Cognionics device
 @return a struct containing the number of available channels, the maximum size of a channel label,
 the available channels' labels, and their respective statuses
 */
-extern "C" COGLIB_API COGChannels COG_GetChannelStatuses(COGDevice *deviceID);
+extern "C" COGLIB_API COGChannels COG_GetChannelStatuses(COGDevice deviceID);
 
 /**
 controls writing to SD card on DAQ headset
@@ -213,7 +213,7 @@ controls writing to SD card on DAQ headset
 @param day, hour, min, sec the
 @return 0 if successful, else returns an error flag
 */
-extern "C" COGLIB_API int COG_SDStartStop(COGDevice *deviceID, MODE SD_MODE, char *filename, int day, int month, int year, int hour, int min, int sec, char *subject, char *description);
+extern "C" COGLIB_API int COG_SDStartStop(COGDevice deviceID, MODE SD_MODE, char *filename, int day, int month, int year, int hour, int min, int sec, char *subject, char *description);
 
 /**
 returns the number of enabled channels
@@ -221,7 +221,7 @@ returns the number of enabled channels
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return the number of enabled channels on the device
 */
-extern "C" COGLIB_API int COG_GetNumEnabledChannels(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetNumEnabledChannels(COGDevice deviceID);
 
 /**
 retrieves the sample rate of the device
@@ -229,7 +229,7 @@ retrieves the sample rate of the device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return the sampling rate of the Cognionics device
 */
-extern "C" COGLIB_API int COG_GetSampleRate(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetSampleRate(COGDevice deviceID);
 
 /**
 retrieves the channel gain of the device
@@ -237,7 +237,7 @@ retrieves the channel gain of the device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return the channel gain of the Cognionics device
 */
-extern "C" COGLIB_API int COG_GetGain(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetGain(COGDevice deviceID);
 
 /**
 retrieves the impedance check mode of the device
@@ -245,7 +245,7 @@ retrieves the impedance check mode of the device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return the impedance check mode of the Cognionics device
 */
-extern "C" COGLIB_API int COG_GetImpedanceCheckMode(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetImpedanceCheckMode(COGDevice deviceID);
 
 /**
 retrieves the power on impedance check enable of the device
@@ -253,7 +253,7 @@ retrieves the power on impedance check enable of the device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return the power on impedance check enable of the Cognionics device
 */
-extern "C" COGLIB_API int COG_GetPowerOnImpedanceCheckEnable(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetPowerOnImpedanceCheckEnable(COGDevice deviceID);
 
 /**
 retrieves the test mode enable of the device
@@ -261,7 +261,7 @@ retrieves the test mode enable of the device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return the test mode enable of the Cognionics device
 */
-extern "C" COGLIB_API int COG_GetTestModeEnable(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetTestModeEnable(COGDevice deviceID);
 
 /**
 retrieves the number of extension channels connected to the device
@@ -269,7 +269,7 @@ retrieves the number of extension channels connected to the device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return the number of extension channels connected
 */
-extern "C" COGLIB_API int COG_GetExtensionChannelsNumber(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetExtensionChannelsNumber(COGDevice deviceID);
 
 /**
 checks if device's accelerometer is enabled
@@ -277,7 +277,7 @@ checks if device's accelerometer is enabled
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 1 if accelerometer is enabled, 0 otherwise
 */
-extern "C" COGLIB_API int COG_GetAccelerometerEnable(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetAccelerometerEnable(COGDevice deviceID);
 
 /**
 checks if device's gyroscope is enabled
@@ -285,7 +285,7 @@ checks if device's gyroscope is enabled
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 1 if gyroscope is enabled, 0 otherwise
 */
-extern "C" COGLIB_API int COG_GetGyroscopeEnable(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetGyroscopeEnable(COGDevice deviceID);
 
 /**
 retrieves the status of the device's wireless trigger
@@ -293,7 +293,7 @@ retrieves the status of the device's wireless trigger
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return the status of the device's wireless trigger
 */
-extern "C" COGLIB_API int COG_GetWirelessTriggerEnable(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetWirelessTriggerEnable(COGDevice deviceID);
 
 /**
 retrieves the data stream mode of the device
@@ -301,7 +301,7 @@ retrieves the data stream mode of the device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 for High Speed data, 1 for legacy data
 */
-extern "C" COGLIB_API int COG_GetDataStreamMode(COGDevice *deviceID);
+extern "C" COGLIB_API int COG_GetDataStreamMode(COGDevice deviceID);
 
 /**
 sets the sample rate of the device
@@ -309,7 +309,7 @@ sets the sample rate of the device
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if local setting is changed, COG_INVALIDINPUT if input is invalid
 */
-extern "C" COGLIB_API int COG_SetSampleRate(COGDevice *deviceID, int setting);
+extern "C" COGLIB_API int COG_SetSampleRate(COGDevice deviceID, int setting);
 
 /**
 sets the device's gain
@@ -317,7 +317,7 @@ sets the device's gain
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if local setting is changed, COG_INVALIDINPUT if input is invalid
 */
-extern "C" COGLIB_API int COG_SetGain(COGDevice *deviceID, int setting);
+extern "C" COGLIB_API int COG_SetGain(COGDevice deviceID, int setting);
 
 /**
 sets the device's impedance check mode
@@ -325,7 +325,7 @@ sets the device's impedance check mode
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if local setting is changed, COG_INVALIDINPUT-3 if input is invalid
 */
-extern "C" COGLIB_API int COG_SetImpedanceCheckMode(COGDevice *deviceID, int setting);
+extern "C" COGLIB_API int COG_SetImpedanceCheckMode(COGDevice deviceID, int setting);
 
 /**
 sets the device's Power On Impedance Check Enable
@@ -333,7 +333,7 @@ sets the device's Power On Impedance Check Enable
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if local setting is changed, COG_INVALIDINPUT if input is invalid
 */
-extern "C" COGLIB_API int COG_SetPowerOnImpedanceCheckEnable(COGDevice *deviceID, int setting);
+extern "C" COGLIB_API int COG_SetPowerOnImpedanceCheckEnable(COGDevice deviceID, int setting);
 
 /**
 sets the device's test mode enable
@@ -341,7 +341,7 @@ sets the device's test mode enable
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if local setting is changed, COG_INVALIDINPUT if input is invalid
 */
-extern "C" COGLIB_API int COG_SetTestModeEnable(COGDevice *deviceID, int setting);
+extern "C" COGLIB_API int COG_SetTestModeEnable(COGDevice deviceID, int setting);
 
 /**
 sets the number of enabled extension channels
@@ -349,7 +349,7 @@ sets the number of enabled extension channels
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if local setting is changed, COG_INVALIDINPUT if input is invalid
 */
-extern "C" COGLIB_API int COG_SetExtensionChannelsNumber(COGDevice *deviceID, int setting);
+extern "C" COGLIB_API int COG_SetExtensionChannelsNumber(COGDevice deviceID, int setting);
 
 /**
 sets the device's accelerometer channel enable
@@ -357,7 +357,7 @@ sets the device's accelerometer channel enable
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if local setting is changed, COG_INVALIDINPUT if input is invalid, COG_INVALIDCHANNELVAL if channel addresses are invalid
 */
-extern "C" COGLIB_API int COG_SetAccelerometerEnable(COGDevice *deviceID, int setting);
+extern "C" COGLIB_API int COG_SetAccelerometerEnable(COGDevice deviceID, int setting);
 
 /**
 sets the device's gyroscope enable
@@ -365,7 +365,7 @@ sets the device's gyroscope enable
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if local setting is changed, COG_INVALIDINPUT if input is invalid, COG_INVALIDCHANNELVAL if channel addresses are invalid
 */
-extern "C" COGLIB_API int COG_SetGyroscopeEnable(COGDevice *deviceID, int setting);
+extern "C" COGLIB_API int COG_SetGyroscopeEnable(COGDevice deviceID, int setting);
 
 /**
 sets the device's wireless trigger enable
@@ -373,7 +373,7 @@ sets the device's wireless trigger enable
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if local setting is changed, COG_INVALIDINPUT if input is invalid
 */
-extern "C" COGLIB_API int COG_SetWirelessTriggerEnable(COGDevice *deviceID, int setting);
+extern "C" COGLIB_API int COG_SetWirelessTriggerEnable(COGDevice deviceID, int setting);
 
 /**
 sets the device's data stream mode
@@ -381,4 +381,4 @@ sets the device's data stream mode
 @param deviceID a pointer to a variable of type COGDevice where the device handle will be stored.
 @return 0 if local setting is changed, COG_INVALIDINPUT if input is invalid
 */
-extern "C" COGLIB_API int COG_SetDataStreamMode(COGDevice *deviceID, int setting);
+extern "C" COGLIB_API int COG_SetDataStreamMode(COGDevice deviceID, int setting);
